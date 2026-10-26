@@ -7,7 +7,13 @@
     <meta name="theme-color" content="#0b1f3a">
 
     <title>PEACE CRM | Coming Soon</title>
-    <meta name="description" content="PEACE CRM — Modern Church Management Software. Something new is coming soon.">
+    <meta name="description" content="PEACE CRM, modern church management software. Coming soon.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=DM+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
 
     <style>
         * {
@@ -16,137 +22,126 @@
             box-sizing: border-box;
         }
 
+        html,
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f8fc;
-            color: #172b4d;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
+            height: 100%;
         }
 
-        .container {
-            width: 100%;
-            max-width: 620px;
-            text-align: center;
-            background: #ffffff;
-            padding: 56px 32px;
-            border-radius: 16px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 12px 40px rgba(11, 31, 58, 0.06);
-        }
-
-        .logo {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 64px;
-            height: 64px;
+        body {
+            font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
             background: #0b1f3a;
-            color: #ffffff;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 14px;
-            margin-bottom: 24px;
-            letter-spacing: -1px;
+            color: #f3f6fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: clamp(24px, 5vw, 56px);
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
         }
 
-        .brand {
-            color: #0b1f3a;
-            font-size: 28px;
+        .circles {
+            position: absolute;
+            right: -8vmin;
+            top: 50%;
+            width: min(78vmin, 760px);
+            transform: translateY(-58%);
+            pointer-events: none;
+        }
+
+        .circles circle {
+            mix-blend-mode: screen;
+        }
+
+        header,
+        main,
+        footer {
+            position: relative;
+            z-index: 1;
+        }
+
+        .wordmark {
+            font-family: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
             font-weight: 700;
-            letter-spacing: 2px;
+            font-size: 20px;
+            letter-spacing: -0.01em;
         }
 
-        .tagline {
-            color: #64748b;
-            margin-top: 8px;
-            font-size: 14px;
-        }
-
-        .divider {
-            width: 48px;
-            height: 3px;
-            background: #0d9488;
-            margin: 32px auto;
-            border-radius: 4px;
+        main {
+            max-width: 900px;
         }
 
         h1 {
-            font-size: clamp(32px, 7vw, 46px);
-            line-height: 1.15;
-            color: #0b1f3a;
-            margin-bottom: 18px;
+            font-family: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+            font-weight: 700;
+            font-size: clamp(46px, 10.5vw, 132px);
+            line-height: 0.96;
+            letter-spacing: -0.035em;
+            max-width: 9em;
         }
 
-        .description {
-            color: #64748b;
-            font-size: 16px;
-            line-height: 1.8;
-            max-width: 440px;
-            margin: 0 auto;
+        .lead {
+            margin-top: 28px;
+            max-width: 32em;
+            font-size: clamp(16px, 2vw, 19px);
+            line-height: 1.6;
+            color: #b9c8dc;
         }
 
-        .status {
+        .soon {
             display: inline-block;
-            margin-top: 30px;
-            padding: 10px 16px;
-            background: #e6f6f3;
-            color: #0f766e;
-            border-radius: 30px;
-            font-size: 13px;
-            font-weight: 600;
+            margin-top: 32px;
+            padding-top: 14px;
+            border-top: 2px solid #2bb3a3;
+            font-weight: 500;
+            font-size: 17px;
         }
 
         footer {
-            margin-top: 44px;
-            padding-top: 24px;
-            border-top: 1px solid #edf0f5;
-            color: #94a3b8;
-            font-size: 12px;
+            margin-top: 56px;
+            font-size: 13px;
+            color: #7f93ae;
         }
 
-        @media (max-width: 480px) {
-            .container {
-                padding: 40px 22px;
-            }
-
-            .brand {
-                font-size: 24px;
+        @media (max-width: 640px) {
+            .circles {
+                width: 120vw;
+                right: -45vw;
+                top: 4%;
+                transform: none;
+                opacity: 0.8;
             }
         }
     </style>
 </head>
 
 <body>
-    <main class="container">
-        <div class="logo" aria-hidden="true">P</div>
+    <svg class="circles" viewBox="0 0 400 400" aria-hidden="true">
+        <circle cx="150" cy="170" r="130" fill="#1b4f94" />
+        <circle cx="255" cy="150" r="100" fill="#1f9f93" />
+        <circle cx="215" cy="262" r="78" fill="#e9a23b" fill-opacity="0.85" />
+    </svg>
 
-        <div class="brand">PEACE CRM</div>
-        <p class="tagline">Modern Church Management Software</p>
+    <header>
+        <div class="wordmark">PEACE CRM</div>
+    </header>
 
-        <div class="divider"></div>
-
-        <h1>Something meaningful is cooking and coming.</h1>
-
-        <p class="description">
-            We're working behind the scenes to bring you a better
-            way to manage your church, connect your community,
-            and simplify everyday operations.
+    <main>
+        <h1>A calmer way to run your church.</h1>
+        <p class="lead">
+            Something new is on its way. We’re putting the final touches on
+            software that helps churches stay close to their people and keep
+            everyday work simple.
         </p>
-
-        <div class="status">Website Relaunch Coming Soon</div>
-
-        <footer>
-            &copy; <span id="year"></span> PEACE CRM. All rights reserved.
-        </footer>
+        <div class="soon">Coming soon</div>
     </main>
 
+    <footer>
+        &copy; <span id="year">2026</span> PEACE CRM. All rights reserved.
+    </footer>
+
     <script>
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 
