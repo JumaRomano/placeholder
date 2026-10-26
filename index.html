@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1f3a">
+
+    <title>PEACE CRM | Coming Soon</title>
+    <meta name="description" content="PEACE CRM — Modern Church Management Software. Something new is coming soon.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f8fc;
+            color: #172b4d;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 620px;
+            text-align: center;
+            background: #ffffff;
+            padding: 56px 32px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 12px 40px rgba(11, 31, 58, 0.06);
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            background: #0b1f3a;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 14px;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .brand {
+            color: #0b1f3a;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            color: #64748b;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .divider {
+            width: 48px;
+            height: 3px;
+            background: #0d9488;
+            margin: 32px auto;
+            border-radius: 4px;
+        }
+
+        h1 {
+            font-size: clamp(32px, 7vw, 46px);
+            line-height: 1.15;
+            color: #0b1f3a;
+            margin-bottom: 18px;
+        }
+
+        .description {
+            color: #64748b;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 440px;
+            margin: 0 auto;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 16px;
+            background: #e6f6f3;
+            color: #0f766e;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 44px;
+            padding-top: 24px;
+            border-top: 1px solid #edf0f5;
+            color: #94a3b8;
+            font-size: 12px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 22px;
+            }
+
+            .brand {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <div class="logo" aria-hidden="true">P</div>
+
+        <div class="brand">PEACE CRM</div>
+        <p class="tagline">Modern Church Management Software</p>
+
+        <div class="divider"></div>
+
+        <h1>Something meaningful is cooking and coming.</h1>
+
+        <p class="description">
+            We're working behind the scenes to bring you a better
+            way to manage your church, connect your community,
+            and simplify everyday operations.
+        </p>
+
+        <div class="status">Website Relaunch Coming Soon</div>
+
+        <footer>
+            &copy; <span id="year"></span> PEACE CRM. All rights reserved.
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+</body>
+
+</html>
